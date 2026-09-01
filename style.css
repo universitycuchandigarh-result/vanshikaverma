@@ -1,0 +1,643 @@
+```css
+/* ==========================
+   GOOGLE FONT & RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #eef3f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.header {
+    min-height: 520px;
+    background: url("header-bg.jpg.png") center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    min-height: 520px;
+    background: rgba(0, 0, 0, 0.60);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #fff;
+
+    padding: 40px 20px;
+}
+
+.overlay h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.overlay p {
+    font-size: 18px;
+    opacity: 0.92;
+}
+
+
+/* ==========================
+   PROFILE SECTION
+========================== */
+
+.profile {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: -55px auto 50px;
+
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==========================
+   LEFT PROFILE CARD
+========================== */
+
+.left {
+    background: #fff;
+
+    border-radius: 20px;
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s ease;
+}
+
+.left:hover {
+    transform: translateY(-5px);
+}
+
+.photo {
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 6px solid #1d4ed8;
+
+    margin-bottom: 20px;
+}
+
+.left h2 {
+    margin-bottom: 12px;
+
+    color: #1d4ed8;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+
+/* ==========================
+   PASSED STATUS
+========================== */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    background: #16a34a;
+    color: #fff;
+
+    padding: 8px 20px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status i {
+    margin-right: 8px;
+}
+
+
+/* ==========================
+   RIGHT INFORMATION CARD
+========================== */
+
+.right {
+    background: #fff;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s ease;
+}
+
+.right:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.title {
+    margin-bottom: 25px;
+}
+
+.title h2 {
+    color: #1d4ed8;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.title i {
+    margin-right: 10px;
+}
+
+
+/* ==========================
+   INFORMATION TABLE
+========================== */
+
+.right table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.right td {
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    vertical-align: middle;
+}
+
+.right td:first-child {
+    width: 40%;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.right td:last-child {
+    color: #555;
+}
+
+.right i {
+    color: #1d4ed8;
+
+    margin-right: 10px;
+}
+
+.pass {
+    color: #16a34a;
+
+    font-weight: 700;
+}
+
+
+/* ==========================
+   GENERAL SECTIONS
+========================== */
+
+.about,
+.skills,
+.details,
+.certificates {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    background: #fff;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.about:hover,
+.skills:hover,
+.details:hover,
+.certificates:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==========================
+   SECTION HEADINGS
+========================== */
+
+.about h2,
+.skills h2,
+.details h2,
+.certificates h2 {
+    color: #1d4ed8;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.about h2 i,
+.skills h2 i,
+.details h2 i,
+.certificates h2 i {
+    margin-right: 8px;
+}
+
+
+/* ==========================
+   CAREER OBJECTIVE
+========================== */
+
+.card p {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #555;
+}
+
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skill-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(180px, 1fr)
+    );
+
+    gap: 20px;
+}
+
+.skill-box {
+    background: #f8fbff;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid #dbeafe;
+
+    transition: 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 25px rgba(29, 78, 216, 0.15);
+}
+
+.skill-box i {
+    font-size: 45px;
+
+    color: #1d4ed8;
+
+    margin-bottom: 15px;
+}
+
+.skill-box h3 {
+    font-size: 18px;
+
+    color: #1e293b;
+}
+
+
+/* ==========================
+   PERSONAL DETAILS TABLE
+========================== */
+
+.details-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+.details-table td {
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.details-table td:first-child {
+    width: 35%;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.details-table td:last-child {
+    color: #555;
+}
+
+.details-table tr:hover {
+    background: #f8fbff;
+}
+
+
+/* ==========================
+   EDUCATION / CERTIFICATES
+========================== */
+
+.certificate-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+.certificate-card {
+    background: #f8fbff;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid #dbeafe;
+
+    transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(29, 78, 216, 0.15);
+}
+
+.certificate-card i {
+    font-size: 50px;
+
+    color: #1d4ed8;
+
+    margin-bottom: 20px;
+}
+
+.certificate-card h3 {
+    margin-bottom: 12px;
+
+    color: #1e293b;
+
+    font-size: 19px;
+}
+
+.certificate-card p {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    background: #0f172a;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+
+    font-size: 15px;
+}
+
+
+/* ==========================
+   TABLET RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+
+    .profile {
+        grid-template-columns: 1fr;
+
+        margin-top: -50px;
+    }
+
+    .overlay h1 {
+        font-size: 36px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+    .photo {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width: 600px) {
+
+    .header,
+    .overlay {
+        min-height: 430px;
+    }
+
+    .overlay {
+        padding: 30px 15px;
+    }
+
+    .overlay h1 {
+        font-size: 27px;
+
+        line-height: 1.3;
+
+        letter-spacing: 1px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .profile {
+        width: 94%;
+
+        margin-top: -35px;
+
+        gap: 20px;
+    }
+
+
+    .left,
+    .right,
+    .about,
+    .skills,
+    .details,
+    .certificates {
+        padding: 25px;
+    }
+
+
+    .photo {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .left h2 {
+        font-size: 24px;
+    }
+
+
+    .title h2,
+    .about h2,
+    .skills h2,
+    .details h2,
+    .certificates h2 {
+        font-size: 23px;
+    }
+
+
+    .right td {
+        padding: 12px 8px;
+    }
+
+
+    .right td:first-child {
+        width: 45%;
+    }
+
+
+    .details-table td {
+        padding: 12px 8px;
+    }
+
+
+    .details-table td:first-child {
+        width: 40%;
+    }
+
+
+    .skill-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+
+    .skill-box {
+        padding: 22px 10px;
+    }
+
+
+    .skill-box i {
+        font-size: 35px;
+    }
+
+
+    .skill-box h3 {
+        font-size: 15px;
+    }
+
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    footer {
+        font-size: 13px;
+
+        padding: 20px 10px;
+    }
+}
+
+
+/* ==========================
+   VERY SMALL SCREENS
+========================== */
+
+@media (max-width: 400px) {
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .right td {
+        display: block;
+
+        width: 100% !important;
+    }
+
+    .right td:first-child {
+        padding-bottom: 5px;
+
+        border-bottom: none;
+    }
+
+    .right td:last-child {
+        padding-top: 5px;
+    }
+}
+```
