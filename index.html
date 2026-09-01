@@ -1,377 +1,843 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ==========================
+   RESET
+========================== */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    <title>Chandigarh University | Personal Student Profile</title>
 
-    <link rel="stylesheet" href="style.css">
+body {
+    background: #eef3f9;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
+/* ==========================
+   HEADER
+========================== */
 
-<body>
+.header {
 
-    <!-- ================= HEADER ================= -->
+    min-height: 520px;
 
-    <header class="header">
+    background: url("header-bg.jpg.png")
+        center center / cover no-repeat;
 
-        <div class="overlay">
+    position: relative;
 
-            <h1>CHANDIGARH UNIVERSITY</h1>
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            <p>Academic Information | Personal Student Profile</p>
+    overflow: hidden;
+}
 
-        </div>
 
-    </header>
+/* ==========================
+   COVER OLD TEXT IN IMAGE
+========================== */
 
+.header::before {
 
-    <!-- ================= PROFILE ================= -->
+    content: "";
 
-    <section class="profile">
+    position: absolute;
 
-        <!-- LEFT CARD -->
+    top: 0;
+    left: 0;
 
-        <div class="left">
+    width: 100%;
+    height: 85px;
 
-            <img
-                src="passport.jpg.jpeg"
-                alt="Vanshika Profile Photo"
-                class="photo">
+    background: rgba(15, 23, 42, 0.75);
 
-            <h2>VANSHIKA</h2>
+    z-index: 1;
+}
 
-            <span class="status">
-                <i class="fa-solid fa-circle-check"></i>
-                PASSED
-            </span>
 
-        </div>
+/* ==========================
+   HEADER OVERLAY
+========================== */
 
+.overlay {
 
-        <!-- RIGHT CARD -->
+    width: 100%;
 
-        <div class="right">
+    min-height: 520px;
 
-            <div class="title">
+    background: rgba(0, 0, 0, 0.60);
 
-                <h2>
-                    <i class="fa-solid fa-user-graduate"></i>
-                    Student Information
-                </h2>
+    display: flex;
 
-            </div>
+    flex-direction: column;
 
+    justify-content: center;
 
-            <table>
+    align-items: center;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-user"></i>
-                        Student Name
-                    </td>
+    text-align: center;
 
-                    <td>VANSHIKA</td>
-                </tr>
+    color: white;
 
+    position: relative;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-user-tie"></i>
-                        Father Name
-                    </td>
+    z-index: 2;
 
-                    <td>VIJAY KUMAR</td>
-                </tr>
+    /* 
+       MOVED DOWN ABOUT 3 CM
+       FROM THE PREVIOUS POSITION
+    */
 
+    padding-top: 265px;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-person-dress"></i>
-                        Mother Name
-                    </td>
+    padding-left: 20px;
 
-                    <td>VANITA RANI</td>
-                </tr>
+    padding-right: 20px;
+}
 
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-id-card"></i>
-                        Roll Number
-                    </td>
+/* ==========================
+   UNIVERSITY HEADING
+========================== */
 
-                    <td>0216470</td>
-                </tr>
+.overlay h1 {
 
+    font-size: 48px;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-hashtag"></i>
-                        Registration Number
-                    </td>
+    font-weight: 700;
 
-                    <td>23-CU-UIMT-466</td>
-                </tr>
+    letter-spacing: 2px;
 
+    margin-bottom: 12px;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-building-columns"></i>
-                        Institute
-                    </td>
+    color: #dc2626;
 
-                    <td>
-                        University Institute of Management &amp; Technology
-                    </td>
-                </tr>
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.75);
+}
 
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-book-open"></i>
-                        Programme
-                    </td>
+/* ==========================
+   SUBTITLE
+========================== */
 
-                    <td>
-                        Bachelor of Business Administration
-                        (Finance &amp; Technology)
-                    </td>
-                </tr>
+.overlay p {
 
+    font-size: 18px;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        Graduation
-                    </td>
+    font-weight: 400;
 
-                    <td>2023 – 2026</td>
-                </tr>
+    color: #ffffff;
 
+    opacity: 0.95;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-cake-candles"></i>
-                        Date of Birth
-                    </td>
+    text-shadow:
+        1px 1px 4px rgba(0, 0, 0, 0.75);
+}
 
-                    <td>21 October 2005</td>
-                </tr>
 
+/* ==========================
+   PROFILE SECTION
+========================== */
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-venus-mars"></i>
-                        Gender
-                    </td>
+.profile {
 
-                    <td>Female</td>
-                </tr>
+    width: 90%;
 
+    max-width: 1200px;
 
-                <tr>
-                    <td>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Academic Status
-                    </td>
+    margin: -10px auto 50px;
 
-                    <td>
-                        <span class="pass">Passed</span>
-                    </td>
-                </tr>
+    display: grid;
 
-            </table>
+    grid-template-columns: 320px 1fr;
 
-        </div>
+    gap: 30px;
 
-    </section>
+    position: relative;
 
+    z-index: 3;
+}
 
-    <!-- ================= CAREER OBJECTIVE ================= -->
 
-    <section class="about">
+/* ==========================
+   LEFT PROFILE CARD
+========================== */
 
-        <div class="card">
+.left {
 
-            <h2>
-                <i class="fa-solid fa-bullseye"></i>
-                Career Objective
-            </h2>
+    background: #fff;
 
-            <p>
-                To build a successful career in Finance, Technology,
-                and Business Management by continuously improving my
-                knowledge and professional skills while contributing
-                to organizational growth through dedication, innovation,
-                and teamwork.
-            </p>
+    border-radius: 20px;
 
-        </div>
+    padding: 35px;
 
-    </section>
+    text-align: center;
 
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
 
-    <!-- ================= SKILLS ================= -->
+    transition: 0.3s ease;
+}
 
-    <section class="skills">
 
-        <h2>
-            <i class="fa-solid fa-laptop-code"></i>
-            Professional Skills
-        </h2>
+.left:hover {
+    transform: translateY(-5px);
+}
 
 
-        <div class="skill-grid">
+/* ==========================
+   PHOTO
+========================== */
 
-            <div class="skill-box">
-                <i class="fa-solid fa-chart-line"></i>
-                <h3>Finance</h3>
-            </div>
+.photo {
 
-            <div class="skill-box">
-                <i class="fa-solid fa-laptop"></i>
-                <h3>Technology</h3>
-            </div>
+    width: 180px;
 
-            <div class="skill-box">
-                <i class="fa-solid fa-file-excel"></i>
-                <h3>MS Excel</h3>
-            </div>
+    height: 180px;
 
-            <div class="skill-box">
-                <i class="fa-solid fa-briefcase"></i>
-                <h3>Business Management</h3>
-            </div>
+    border-radius: 50%;
 
-            <div class="skill-box">
-                <i class="fa-solid fa-people-group"></i>
-                <h3>Team Work</h3>
-            </div>
+    object-fit: cover;
 
-            <div class="skill-box">
-                <i class="fa-solid fa-comments"></i>
-                <h3>Communication</h3>
-            </div>
+    border: 6px solid #dc2626;
 
-        </div>
+    margin-bottom: 20px;
+}
 
-    </section>
 
+/* ==========================
+   NAME
+========================== */
 
-    <!-- ================= PERSONAL DETAILS ================= -->
+.left h2 {
 
-    <section class="details">
+    margin-bottom: 12px;
 
-        <h2>
-            <i class="fa-solid fa-address-card"></i>
-            Personal Details
-        </h2>
+    color: #dc2626;
 
+    font-size: 27px;
 
-        <table class="details-table">
+    font-weight: 700;
+}
 
-            <tr>
-                <td>Name</td>
-                <td>VANSHIKA</td>
-            </tr>
 
-            <tr>
-                <td>Date of Birth</td>
-                <td>21 October 2005</td>
-            </tr>
+/* ==========================
+   STATUS
+========================== */
 
-            <tr>
-                <td>Gender</td>
-                <td>Female</td>
-            </tr>
+.status {
 
-            <tr>
-                <td>Father Name</td>
-                <td>VIJAY KUMAR</td>
-            </tr>
+    display: inline-flex;
 
-            <tr>
-                <td>Mother Name</td>
-                <td>VANITA RANI</td>
-            </tr>
+    align-items: center;
 
-        </table>
+    background: #16a34a;
 
-    </section>
+    color: #fff;
 
+    padding: 8px 20px;
 
-    <!-- ================= EDUCATION ================= -->
+    border-radius: 30px;
 
-    <section class="certificates">
+    font-size: 14px;
 
-        <h2>
-            <i class="fa-solid fa-graduation-cap"></i>
-            Education
-        </h2>
+    font-weight: 600;
+}
 
 
-        <div class="certificate-grid">
+.status i {
+    margin-right: 8px;
+}
 
-            <div class="certificate-card">
 
-                <i class="fa-solid fa-user-graduate"></i>
+/* ==========================
+   RIGHT INFORMATION CARD
+========================== */
 
-                <h3>
-                    Bachelor of Business Administration
-                </h3>
+.right {
 
-                <p>Finance &amp; Technology</p>
+    background: #fff;
 
-                <p>2023 – 2026</p>
+    padding: 35px;
 
-            </div>
+    border-radius: 20px;
 
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.10);
 
-            <div class="certificate-card">
+    transition: 0.3s ease;
+}
 
-                <i class="fa-solid fa-building-columns"></i>
 
-                <h3>
-                    University Institute of Management &amp; Technology
-                </h3>
+.right:hover {
+    transform: translateY(-5px);
+}
 
-                <p>Academic Programme</p>
 
-            </div>
+/* ==========================
+   INFORMATION TITLE
+========================== */
 
+.title {
+    margin-bottom: 25px;
+}
 
-            <div class="certificate-card">
 
-                <i class="fa-solid fa-award"></i>
+.title h2 {
 
-                <h3>Graduation</h3>
+    color: #dc2626;
 
-                <p>2026</p>
+    font-size: 30px;
 
-            </div>
+    font-weight: 700;
+}
 
-        </div>
 
-    </section>
+.title i {
+    margin-right: 10px;
+}
 
 
-    <!-- ================= FOOTER ================= -->
+/* ==========================
+   INFORMATION TABLE
+========================== */
 
-    <footer>
+.right table {
 
-        <p>
-            © 2026 Vanshika | Personal Student Profile
-        </p>
+    width: 100%;
 
-    </footer>
+    border-collapse: collapse;
+}
 
-</body>
-</html>
+
+.right td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    vertical-align: middle;
+}
+
+
+.right td:first-child {
+
+    width: 40%;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+.right td:last-child {
+    color: #555;
+}
+
+
+.right i {
+
+    color: #dc2626;
+
+    margin-right: 10px;
+}
+
+
+/* ==========================
+   PASS
+========================== */
+
+.pass {
+
+    color: #16a34a;
+
+    font-weight: 700;
+}
+
+
+/* ==========================
+   GENERAL SECTIONS
+========================== */
+
+.about,
+.skills,
+.details,
+.certificates {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 40px auto;
+
+    background: #fff;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.about:hover,
+.skills:hover,
+.details:hover,
+.certificates:hover {
+
+    transform: translateY(-5px);
+}
+
+
+/* ==========================
+   SECTION HEADINGS
+========================== */
+
+.about h2,
+.skills h2,
+.details h2,
+.certificates h2 {
+
+    color: #dc2626;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+.about h2 i,
+.skills h2 i,
+.details h2 i,
+.certificates h2 i {
+
+    margin-right: 8px;
+}
+
+
+/* ==========================
+   CAREER OBJECTIVE
+========================== */
+
+.card p {
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    color: #555;
+}
+
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skill-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+
+.skill-box {
+
+    background: #fff7f7;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid #fecaca;
+
+    transition: 0.3s ease;
+}
+
+
+.skill-box:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 25px rgba(220, 38, 38, 0.15);
+}
+
+
+.skill-box i {
+
+    font-size: 45px;
+
+    color: #dc2626;
+
+    margin-bottom: 15px;
+}
+
+
+.skill-box h3 {
+
+    font-size: 18px;
+
+    color: #1e293b;
+}
+
+
+/* ==========================
+   PERSONAL DETAILS
+========================== */
+
+.details-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+}
+
+
+.details-table td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+.details-table td:first-child {
+
+    width: 35%;
+
+    font-weight: 600;
+
+    color: #374151;
+}
+
+
+.details-table td:last-child {
+    color: #555;
+}
+
+
+.details-table tr:hover {
+    background: #fff7f7;
+}
+
+
+/* ==========================
+   EDUCATION
+========================== */
+
+.certificate-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+
+.certificate-card {
+
+    background: #fff7f7;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid #fecaca;
+
+    transition: 0.3s ease;
+}
+
+
+.certificate-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(220, 38, 38, 0.15);
+}
+
+
+.certificate-card i {
+
+    font-size: 50px;
+
+    color: #dc2626;
+
+    margin-bottom: 20px;
+}
+
+
+.certificate-card h3 {
+
+    margin-bottom: 12px;
+
+    color: #1e293b;
+
+    font-size: 19px;
+}
+
+
+.certificate-card p {
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+
+    background: #0f172a;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+
+    font-size: 15px;
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 900px) {
+
+    .profile {
+
+        grid-template-columns: 1fr;
+
+        margin-top: -10px;
+    }
+
+
+    .overlay h1 {
+        font-size: 36px;
+    }
+
+
+    .overlay p {
+        font-size: 16px;
+    }
+
+
+    .photo {
+
+        width: 160px;
+
+        height: 160px;
+    }
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 600px) {
+
+    .header,
+    .overlay {
+
+        min-height: 430px;
+    }
+
+
+    .header::before {
+        height: 65px;
+    }
+
+
+    .overlay {
+
+        padding-top: 100px;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    .overlay h1 {
+
+        font-size: 27px;
+
+        line-height: 1.3;
+
+        letter-spacing: 1px;
+    }
+
+
+    .overlay p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .profile {
+
+        width: 94%;
+
+        margin-top: -10px;
+
+        gap: 20px;
+    }
+
+
+    .left,
+    .right,
+    .about,
+    .skills,
+    .details,
+    .certificates {
+
+        padding: 25px;
+    }
+
+
+    .photo {
+
+        width: 140px;
+
+        height: 140px;
+    }
+
+
+    .left h2 {
+        font-size: 24px;
+    }
+
+
+    .title h2,
+    .about h2,
+    .skills h2,
+    .details h2,
+    .certificates h2 {
+
+        font-size: 23px;
+    }
+
+
+    .right td {
+        padding: 12px 8px;
+    }
+
+
+    .right td:first-child {
+        width: 45%;
+    }
+
+
+    .details-table td {
+        padding: 12px 8px;
+    }
+
+
+    .details-table td:first-child {
+        width: 40%;
+    }
+
+
+    .skill-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+
+    .skill-box {
+        padding: 22px 10px;
+    }
+
+
+    .skill-box i {
+        font-size: 35px;
+    }
+
+
+    .skill-box h3 {
+        font-size: 15px;
+    }
+
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    footer {
+
+        font-size: 13px;
+
+        padding: 20px 10px;
+    }
+}
+
+
+/* ==========================
+   VERY SMALL SCREENS
+========================== */
+
+@media (max-width: 400px) {
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .right td {
+
+        display: block;
+
+        width: 100% !important;
+    }
+
+
+    .right td:first-child {
+
+        padding-bottom: 5px;
+
+        border-bottom: none;
+    }
+
+
+    .right td:last-child {
+        padding-top: 5px;
+    }
+}
